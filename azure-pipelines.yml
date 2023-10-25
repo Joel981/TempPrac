@@ -10,6 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- template: temp.yml
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -21,4 +22,4 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-- template: temp.yml
+
